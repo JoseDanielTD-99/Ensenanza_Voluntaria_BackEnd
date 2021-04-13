@@ -1,0 +1,35 @@
+﻿@model FrontEnd.Models.InstitucionViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+
+<div class="container">
+    <h4>InstitucionViewModel</h4>
+    <hr />
+    <div class="row">
+        <form class="col s12" asp-action="Create">
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label"></label>
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="center">
+                <button class="btn waves-effect waves-light" type="submit" value="Create" name="action">
+                    Submit
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
