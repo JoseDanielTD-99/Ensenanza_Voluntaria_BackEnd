@@ -15,7 +15,7 @@ namespace BackEndAPI.Controllers
     {
         [HttpGet]
         [Route("getall")]
-        public JsonResult GetAllDistritos()
+        public JsonResult GetAllInstituciones()
         {
             IEnumerable<Institucion> institucions;
 
@@ -29,7 +29,7 @@ namespace BackEndAPI.Controllers
 
         [HttpGet]
 
-        public JsonResult GetDistrito(int id)
+        public JsonResult GetInstitucion(int id)
         {
             Institucion institucion;
             using (UnidadDeTrabajo<Institucion> unidad = new UnidadDeTrabajo<Institucion>(new Ensenanza_VoluntariaContext()))
@@ -42,7 +42,7 @@ namespace BackEndAPI.Controllers
         
         [HttpPost]
         [Route("agregar")]
-        public bool AgregarDistrito(Institucion institucion)
+        public bool AgregarInstitucion(Institucion institucion)
         {
 
             // Category category = new Category();
@@ -71,7 +71,7 @@ namespace BackEndAPI.Controllers
         
         [HttpPost]
         [Route("actualizar")]
-        public bool Actualizar(Institucion institucion)
+        public bool ActualizarInstitucion(Institucion institucion)
         {
             bool result = false;
 
@@ -96,7 +96,7 @@ namespace BackEndAPI.Controllers
         
         [HttpPost]
         [Route("eliminar")]
-        public bool Eliminar(Institucion institucion)
+        public bool EliminarInstitucion(Institucion institucion)
         {
             bool result = false;
 
